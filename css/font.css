@@ -1,0 +1,9 @@
+@font-face{
+    font-family: 'NanumGothic-Bold';
+    src: url(/Font/nanum-gothic/NanumGothicBold.otf);
+}
+
+@font-face {
+    font-family: 'NanumGothic';
+    src: url(/Font/nanum-gothic/NanumGothic.otf);
+}

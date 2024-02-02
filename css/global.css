@@ -1,0 +1,24 @@
+:root{
+    --primaryColor:#006a75;
+    --secondaryColor:#cadcde;
+    --white:#fff;
+    --grey:#dad9d9;
+    --blackApple:#1b1b1b;
+    --blackSlack: #1a1c20;
+
+    --mainEng-font-family:"NanumGothic";
+    --mainKor-font-family:"NanumGothic";
+    --mainBold-font-family:"NanumGothic-Bold"; 
+}
+
+body{font-family: var(--mainKor-font-family);}
+
+span{font-family: var(--mainBold-font-family);}
+
+.span_type1{color: #757575;}
+
+h2{font-size: 42px;}
+
+h3{font-size: 22px;}
+
+h4{font-size: 18px;}

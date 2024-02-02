@@ -1,0 +1,401 @@
+@import url(/reset.css);
+@import url(./css/global.css);
+@import url(./css/font.css);
+
+.flex {
+    display: flex;
+}
+
+body {
+    position: relative;
+}
+
+.inner {
+    width: 1200px;
+    margin: auto;
+}
+
+/* ------------------------header----------------------------- */
+header {
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    background: #006a75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 140px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 195px;
+    background: var(--blackApple);
+    opacity: 0;
+    transition: .5s;
+}
+
+header.on::after {
+    opacity: .6;
+    transition: .5s;
+}
+
+nav {
+    width: 1200px;
+    margin: auto
+}
+
+nav h1 a {
+    display: inline-block;
+    height: 50px;
+    margin: 25px 0;
+}
+
+nav h1 img {
+    height: 100%;
+}
+
+nav>ul {
+    margin-top: 18px;
+}
+
+nav ul li.main-menu {
+    flex: 1;
+}
+
+li.main-menu>a {
+    font-family: var(--mainBold-font-family);
+    color: #000;
+    padding: 2px 0;
+}
+
+li.main-menu>a:hover {
+    border-bottom: 2px solid #000;
+}
+
+ul.sub-menu {
+    margin-top: 8px;
+    color: #fff;
+    display: none;
+}
+
+ul.sub-menu li a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.icon-box {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    gap: 1rem;
+}
+
+/* -------------------------main slide------------------------------ */
+.swiper.main_slide {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.main_slide .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_slide .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------------------------main Instro------------------------------ */
+.instro {
+    width: 100%;
+    height: 100vh;
+}
+
+.company_container,
+.campain_container {
+    height: 50%;
+}
+
+.company_container {
+    background: #fff;
+    text-align: center;
+}
+
+.company_Instroduction {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 3rem;
+}
+
+.company_main {
+    width: 260px;
+    border-bottom: 2px solid #000;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.company_main h2 {
+    margin-bottom: 1rem;
+}
+
+.company_Instroduction p {
+    line-height: 1.5rem;
+}
+
+.campain_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background: var(--blackApple);
+}
+
+.campain_menu .inner {
+    justify-content: space-between;
+    font-weight: 1000;
+    padding: 0 72px;
+}
+
+.campain_menu li {
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.campain_menu li.on {
+    border-bottom: 3px solid #fff;
+}
+
+.campain_container {
+    position: relative;
+}
+
+.campain_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.campain_box.on{opacity: 1;}
+
+.campain_box.on article{opacity: 1;
+transition: 1s;}
+
+.campain_box.one {
+    background: url(./img/The\ beauty\ of\ action_BG.jpg) center no-repeat;
+}
+
+.campain_box.two{
+    background: url(./img/Paper\ packages\ BG2.jpg) center no-repeat;
+}
+
+.campain_box.three{
+    background: url(./img/SOLID\ OVER\ LIQUID\ BG.jpg) center no-repeat;
+}
+
+.campain_box.four{
+    background: url(./img/FARM\ TO\ PRODUCTION\ BG.jpg) center no-repeat;
+}
+
+.campain_box article {
+    background: #fff;
+    height: 80%;
+    gap: 3rem;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 265px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.campain_box article figure {
+    width: 30%;
+    height: 80%;
+}
+
+.campain_box article figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.campain_box article figcaption {
+    width: 60%;
+}
+
+.campain_box article figcaption .figcaption_box {
+    margin: 2rem 0;
+}
+
+.campain_box article figcaption h4 {
+    margin-bottom: 1rem;
+}
+
+/* -------------------------main contents------------------------------ */
+.contents{width: 100%;
+height: 100vh;
+text-align: center;
+}
+
+.product_container{height: 50%;}
+
+.product_container h3{margin: 5rem 0 2rem;}
+
+.product_container span{display: block;
+margin-bottom: 12px;}
+
+.BP_box, .GP_box{flex: 1;}
+
+.BP_product_box, .GP_product_box{gap: 2rem;
+justify-content: center;}
+
+.contents figure .img_box{width: 250px;
+height: 250px;}
+
+.contents figure .img_box img{width: 100%;
+height: 100%;
+object-fit: cover;}
+
+.contents figcaption{margin-top: 1rem;}
+
+.service-event_container{height: calc(50% - 3rem);
+    padding: 1.5rem;
+overflow: hidden;}
+
+.service-event_container h2{margin-bottom: 2rem;}
+
+.service-event_container .swiper {
+    width: 40%;
+    height: calc(100% - 6rem);
+  }
+
+.service-event_container .swiper-slide {
+    height: inherit;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .service-event_container .swiper-slide a{width: 80%;
+    height: inherit;
+    }
+
+.service-event_container .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: calc(100% - 41px);
+    object-fit: cover;
+  }
+
+  .service-event_container .swiper-slide h3{margin-top: 1rem;}
+
+/* -------------------------main contents------------------------------ */
+.toun28-lovers_container{
+    padding-top: 4rem;
+    height: calc(82vh - 2rem) ;
+    text-align: center;}
+
+    .toun28-lovers_container h2{padding: 12px 0;}
+
+.toun28-lovers_container ul{align-items: center;
+justify-content: center;
+gap: 2rem;
+font-size: 22px;
+}
+
+
+
+.toun28-lovers_container ul li{
+margin-bottom: 1rem;
+font-weight: 600;}
+
+.toun28-lovers_container ul li.on{
+    border-bottom: 2px solid #000;
+}
+
+.toun28-lovers_container ul li a{padding: 4px 0;}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.item {
+  height: 267px;
+}
+
+.item-1 {
+  grid-row: span 2; /* 2행에 걸쳐있음 */
+  height: 550px;
+}
+
+.item-3,
+.item-4 {
+  grid-column: span 2; /* 2열에 걸쳐있음 */
+}
+
+.item img{width: 100%;
+height: 100%;
+object-fit: cover;}
+
+.item video{width: 100%;
+height: 100%;
+object-fit: cover;}
+
+.more_box{width: 230px;
+    margin: 24px auto;
+}
+
+.more_box a{display: block;
+    width: 80%;
+    font-size: 18px;
+    padding: 5px 0;
+background-color: var(--grey);
+border-radius: 5px;
+font-weight: 1000;
+}
+
+
+
+/* ------------------------footer----------------------------- */
+footer{
+height: calc(18vh - 6rem);
+background: #000;
+color: #fff;
+padding: 2rem;
+}
+
+footer li{padding: 0 1rem;
+    border-left: 2px solid #fff;}
+
+footer li a{display: block;}
+
+footer>p{margin: ;}
+
+footer .copyright{width: 100%;}
